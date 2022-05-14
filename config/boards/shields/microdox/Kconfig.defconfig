@@ -1,3 +1,6 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
 if SHIELD_MICRODOX_V2_LEFT
 
 config ZMK_KEYBOARD_NAME
@@ -48,8 +51,5 @@ choice LVGL_COLOR_DEPTH
 endchoice
 
 endif # LVGL
-
-endif
-
 
 endif
