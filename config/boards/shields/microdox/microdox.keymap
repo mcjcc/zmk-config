@@ -24,6 +24,9 @@
    &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
           &kp LGUI &mo 1 &kp LSHFT &kp SPACE &mo 2 &kp RALT
                         >;
+                                    
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
                 };
                 nav_layer {
 // -----------------------------------------------------------------------------------------
@@ -37,6 +40,9 @@
    &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
                             &trans   &trans    &trans     &trans   &trans   &trans
                         >;
+
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
                 };
 
                 sym_layer {
@@ -51,6 +57,9 @@
    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
                        &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
+
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+                
                 };
 
 // This layer is unreachable until "tri layer state" is sorted out.
@@ -67,6 +76,9 @@
    &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
                  &trans &trans &trans    &kp N0 &kp DOT &trans
                         >;
+
+                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+
                 };
         };
 };
