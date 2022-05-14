@@ -8,6 +8,8 @@ exposes: [i2c_oled]
 features:
   - keys
   - display
+  - encoder
+  - underglow
 siblings:
   - microdox_v2_left
   - microdox_v2_right
