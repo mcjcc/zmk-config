@@ -1,0 +1,5 @@
+config MICRODOX_V2_LEFT
+    def_bool $(shields_list_contains,microdox_v2_left)
+
+config MICRODOX_V2_RIGHT
+    def_bool $(shields_list_contains,microdox_v2_right)
