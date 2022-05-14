@@ -1,0 +1,13 @@
+file_format: '1'
+id: rhymestone
+name: Rhymestone
+type: shield
+url:
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+siblings:
+  - rhymestone_left
+  - rhymestone_right

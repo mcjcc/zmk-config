@@ -1,0 +1,5 @@
+config RHYMESTONE_LEFT
+    def_bool $(shields_list_contains,rhymestone_left)
+
+config RHYMESTONE_RIGHT
+    def_bool $(shields_list_contains,rhymestone_right)
