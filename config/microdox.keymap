@@ -7,8 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <miryoku/miryoku_layer_names.h>
-#include <miryoku/miryoku_alternatives.h>
+#include </__w/zmk-config/zmk-config/config/miryoku/miryoku_layer_names.h>
+#include </__w/zmk-config/zmk-config/config/miryoku/miryoku_alternatives.h>
 
 &lt { quick_tap_ms = <200>; };
 
