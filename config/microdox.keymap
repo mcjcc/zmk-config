@@ -9,13 +9,11 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define BASE   0
-#define BUTTON 1
-#define NAV    2
-#define MOUSE  3
-#define MEDIA  4
-#define NUM    5
-#define SYM    6
-#define FUN    7
+#define NAV    1
+#define MEDIA  2
+#define NUM    3
+#define SYM    4
+#define FUN    5
 
 
 &lt { quick_tap_ms = <200>; };
@@ -37,59 +35,25 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
                                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                 &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G          &kp H &hm LSHFT J &hm LCTRL K &hm LALT L &hm LGUI SQT      
-                          &lt BUTTON Z &hm RALT X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &hm RALT DOT &lt BUTTON SLASH  
-                            &lt MEDIA ESC &lt NAV SPC &lt MOUSE TAB          &lt SYM RET &lt NUM BSPC &lt FUN DEL 
+                                 &kp Z &hm RALT X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &hm RALT DOT &kp SLASH  
+                                &lt MEDIA ESC &lt NAV SPACE &kp TAB          &lt SYM RET &lt NUM BSPC &lt FUN DEL 
                         >;
                                     
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
                 };
 
-                btn_layer {
-                         bindings = <
-        &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO             
-                   &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none          &none &kp LSHFT &kp LCTRL &kp LALT  &kp LGUI  
-        &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_REDO          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO 
-                              &kp U_BTN2 &kp U_BTN3 &kp U_BTN1          &kp U_BTN1 &kp U_BTN3 &kp U_BTN2   
-
-            >;
-                                    
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-                };
-
 
                 nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
                         bindings = <
                         &bootloader &none &none &none &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO             
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp CAPS  
                        &none  &kp RALT  &none  &none  &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp INS 
                                           &none &none &none          &kp RET &kp BSPC &kp DEL         
 
-                        >;
-
-                sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-
-                };
-
-                mouse_layer {
-                        bindings = <
-                        &bootloader &none &none &none &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO 
-                      &kp LGUI &kp LALT &kp LCTRL &kp LSHFT          &none &kp U_MS_L &k U_MS_D &kp U_MS_U &kp U_MS_R &kp U_NU 
-                           &none &kp RALT &none &none &none          &kp U_WH_L &kp U_WH_D &kp U_WH_U &kp U_WH_R &kp U_NU 
-                                          &none &none &none          &kp U_BTN1 &kp U_BTN3 &kp U_BTN2       
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -111,16 +75,11 @@
                 
 
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-                   &kp LBKT &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp LBKT          &none &none &none &none &bootloader   
-                    &kp SEMI &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp EQL          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
-                  &kp GRAVE &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp BSLH          &none &none &none &kp RALT &none 
-                                       &kp DOT &kp NUM_0 &kp MINUS          &none &none &none       
+                   &kp LBKT &kp N7 &kp N8 &kp N9 &kp LBKT          &none &none &none &none &bootloader   
+                    &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
+                  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH          &none &none &none &kp RALT &none 
+                                       &kp DOT &kp N0 &kp MINUS          &none &none &none       
 
                         >;
 
@@ -130,14 +89,9 @@
 
 
                 sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
                         &kp LBRC &kp AMPS &kp ASTRK &kp LPAR &kp RBRC          &none &none &none &none &bootloader   
-                        &kp COLON &kp DLLR &kp PRCT &kp CRRT &kp PLUS          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
+                        &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
                           &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE          &none &none &none &kp RALT &none 
                                           &kp LPAR &kp RPAR &kp UNDER          &none &none &none              
 
@@ -152,7 +106,7 @@
                         &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN          &none &none &none &none &bootloader  
                          &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
                   &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK          &none &none &none &kp RALT &none 
-                                     &kp K_APP &kp SPC &kp TAB          &none &none &none  
+                                     &kp K_APP &kp SPACE &kp TAB          &none &none &none  
 
                         >;
 
@@ -162,5 +116,3 @@
                 
         };
 };
-
-
