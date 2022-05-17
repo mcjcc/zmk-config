@@ -39,7 +39,7 @@
                                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                 &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &kp G          &kp H &hm LSHFT J &hm LCTRL K &hm LALT L &hm LGUI SQT      
                                  &kp Z &hm RALT X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &hm RALT DOT &kp SLASH  
-                                   &lt MEDIA ESC &lt NAV TAB &kp RET          &lt SYM RET &lt NUM SPACE &lt FUN BSPC 
+                                  &lt MEDIA ESC &lt NAV TAB &kp RET          &lt SYM RET &lt NUM SPACE &lt FUN BSPC 
                         >;
                                     
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -49,7 +49,7 @@
 
                 nav_layer {
                         bindings = <
-                        &bootloader &none &none &none &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO             
+                              &none &none &none &none &none          &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO             
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp CAPS  
                        &none  &kp RALT  &none  &none  &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp INS 
                                           &none &none &none          &kp RET &kp SPACE &kp DEL         
@@ -64,7 +64,7 @@
 
                 media_layer {
                         bindings = <
-                        &bootloader &none &none &none &none          &none &kp C_BRI_UP &kp C_BRI_DN &none &none 
+                              &none &none &none &none &none          &none &kp C_BRI_UP &kp C_BRI_DN &none &none 
                 &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &none          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
                            &none &kp RALT &none &none &none          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
                                           &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
@@ -76,7 +76,7 @@
 
                 num_layer {
                         bindings = <
-                     &kp LBKT &kp N7 &kp N8 &kp N9 &kp LBKT          &none &none &none &none &bootloader   
+                     &kp LBKT &kp N7 &kp N8 &kp N9 &kp LBKT          &none &none &none &none &none   
                     &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
                     &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH          &none &none &none &kp RALT &none 
                                    &kp DOT &kp N0 &kp MINUS          &none &none &none       
@@ -90,7 +90,7 @@
 
                 sym_layer {
                         bindings = <
-                        &kp LBRC &kp AMPS &kp ASTRK &kp LPAR &kp RBRC          &none &none &none &none &bootloader   
+                        &kp LBRC &kp AMPS &kp ASTRK &kp LPAR &kp RBRC          &none &none &none &none &none   
                       &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
                           &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE          &none &none &none &kp RALT &none 
                                           &kp LPAR &kp RPAR &kp UNDER          &none &none &none              
@@ -103,7 +103,7 @@
 
                 fun_layer{
                           bindings = <
-                        &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN          &none &none &none &none &bootloader  
+                        &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN          &none &none &none &none &none  
                          &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK          &none &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
                   &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK          &none &none &none &kp RALT &none 
                                    &kp K_APP &kp SPACE &kp TAB          &none &none &none  
