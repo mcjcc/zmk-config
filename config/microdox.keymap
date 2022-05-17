@@ -7,8 +7,16 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <miryoku_layer_names.h>
-#include <miryoku_alternatives.h>
+
+#define BASE   0
+#define BUTTON 1
+#define NAV    2
+#define MOUSE  3
+#define MEDIA  4
+#define NUM    5
+#define SYM    6
+#define FUN    7
+
 
 &lt { quick_tap_ms = <200>; };
 
@@ -35,7 +43,10 @@
 // |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
 //             | GUI | NAV | SHFT |   | SPC | SYM  | ALT |
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_BASE_QWERTY
+                        &kp Q             &kp W             &kp E             &kp R             &kp T             &kp Y             &kp U             &kp I             &kp O             &kp P             
+&hm LGUI A        &hm LALT S        &hm LCTRL D       &hm LSHFT F       &kp G             &kp H             &hm LSHFT J       &hm LCTRL K       &hm LALT L        &hm LGUI SQT      
+&lt BUTTON Z      &hm RALT X        &kp C             &kp V             &kp B             &kp N             &kp M             &kp COMMA         &hm RALT DOT      &lt BUTTON SLASH  
+U_NP              U_NP              &lt MEDIA ESC     &lt NAV SPC       &lt MOUSE TAB     &lt SYM RET       &lt NUM BSPC      &lt FUN DEL       U_NP              U_NP
                         >;
                                     
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -44,7 +55,11 @@
 
                 btn_layer {
                          bindings = <
-                        MIRYOKU_ALTERNATIVES_BUTTON
+                        U_UND             U_CUT             U_CPY             U_PST             U_RDO             U_RDO             U_PST             U_CPY             U_CUT             U_UND             
+&kp LGUI          &kp LALT          &kp LCTRL         &kp LSHFT         &none             &none             &kp LSHFT         &kp LCTRL         &kp LALT          &kp LGUI          
+U_UND             U_CUT             U_CPY             U_PST             U_RDO             U_RDO             U_PST             U_CPY             U_CUT             U_UND             
+U_NP              U_NP              U_BTN2            U_BTN3            U_BTN1            U_BTN1            U_BTN3            U_BTN2            U_NP              U_NP
+
                         >;
                                     
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -58,7 +73,11 @@
 // | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
 //             |     |      |     |   |     |      |      |
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_NAV_VI
+                        &bootloader       U_NA              U_NA              U_NA              U_NA              U_RDO             U_PST             U_CPY             U_CUT             U_UND             
+&kp LGUI          &kp LALT          &kp LCTRL         &kp LSHFT         U_NA              &kp LEFT          &kp DOWN          &kp UP            &kp RIGHT         &kp CAPS          
+U_NA              &kp RALT          U_NA              U_NA              U_NA              &kp HOME          &kp PG_DN         &kp PG_UP         &kp END           &kp INS           
+U_NP              U_NP              U_NA              U_NA              U_NA              &kp RET           &kp BSPC          &kp DEL           U_NP              U_NP
+
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -67,7 +86,10 @@
 
                 mouse_layer {
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_MOUSE_VI
+                        &bootloader       U_NA              U_NA              U_NA              U_NA              U_RDO             U_PST             U_CPY             U_CUT             U_UND             
+&kp LGUI          &kp LALT          &kp LCTRL         &kp LSHFT         U_NA              U_MS_L            U_MS_D            U_MS_U            U_MS_R            U_NU              
+U_NA              &kp RALT          U_NA              U_NA              U_NA              U_WH_L            U_WH_D            U_WH_U            U_WH_R            U_NU              
+U_NP              U_NP              U_NA              U_NA              U_NA              U_BTN1            U_BTN3            U_BTN2            U_NP              U_NP
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -78,7 +100,11 @@
 
                 media_layer {
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_MEDIA_VI
+                        &bootloader       U_NA              U_NA              U_NA              U_NA              &rgb_ug RGB_TOG   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   
+&kp LGUI          &kp LALT          &kp LCTRL         &kp LSHFT         U_NA              &kp C_PREV        &kp C_VOL_DN      &kp C_VOL_UP      &kp C_NEXT        &out OUT_TOG      
+U_NA              &kp RALT          U_NA              U_NA              U_NA              &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3      &bt BT_CLR        
+U_NP              U_NP              U_NA              U_NA              U_NA              &kp C_STOP        &kp C_PP          &kp C_MUTE        U_NP              U_NP
+
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -92,7 +118,11 @@
 // |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_NUM
+                        &kp LBKT          &kp NUM_7         &kp NUM_8         &kp NUM_9         &kp RBKT          U_NA              U_NA              U_NA              U_NA              &bootloader       
+&kp SEMI          &kp NUM_4         &kp NUM_5         &kp NUM_6         &kp EQL           U_NA              &kp LSHFT         &kp LCTRL         &kp LALT          &kp LGUI          
+&kp GRAVE         &kp NUM_1         &kp NUM_2         &kp NUM_3         &kp BSLH          U_NA              U_NA              U_NA              &kp RALT          U_NA              
+U_NP              U_NP              &kp DOT           &kp NUM_0         &kp MINUS         U_NA              U_NA              U_NA              U_NP              U_NP
+
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -107,7 +137,11 @@
 // |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
 //             | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-                        MIRYOKU_ALTERNATIVES_SYM
+                        &kp LBRC          &kp AMPS          &kp ASTRK         &kp LPAR          &kp RBRC          U_NA              U_NA              U_NA              U_NA              &bootloader       
+&kp COLON         &kp DLLR          &kp PRCT          &kp CRRT          &kp PLUS          U_NA              &kp LSHFT         &kp LCTRL         &kp LALT          &kp LGUI          
+&kp TILDE         &kp EXCL          &kp AT            &kp HASH          &kp PIPE          U_NA              U_NA              U_NA              &kp RALT          U_NA              
+U_NP              U_NP              &kp LPAR          &kp RPAR          &kp UNDER         U_NA              U_NA              U_NA              U_NP              U_NP
+
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -116,14 +150,16 @@
 
                 fun_layer{
                           bindings = <
-                        MIRYOKU_ALTERNATIVES_FUN
+                        &kp F12           &kp F7            &kp F8            &kp F9            &kp PSCRN         U_NA              U_NA              U_NA              U_NA              &bootloader       
+&kp F11           &kp F4            &kp F5            &kp F6            &kp SLCK          U_NA              &kp LSHFT         &kp LCTRL         &kp LALT          &kp LGUI          
+&kp F10           &kp F1            &kp F2            &kp F3            &kp PAUSE_BREAK   U_NA              U_NA              U_NA              &kp RALT          U_NA              
+U_NP              U_NP              &kp K_APP         &kp SPC           &kp TAB           U_NA              U_NA              U_NA              U_NP              U_NP
+
                         >;
 
                 sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
                 
         };
 };
