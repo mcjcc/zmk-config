@@ -53,38 +53,52 @@
       };
 
 
-      l_gui {
+
+      l_ctrl {
         timeout-ms = <50>;
         key-positions = <20 21>;
-        bindings = <&sk LGUI>;
+        bindings = <&sk LCTRL>;
       };
-
-      l_gui_2 {
-        timeout-ms = <50>;
-        key-positions = <31 32>;
-        bindings = <&sk LGUI>;
-      };
-
       l_alt {
         timeout-ms = <50>;
         key-positions = <21 22>;
         bindings = <&sk LALT>;
       };
-      l_ctrl {
-        timeout-ms = <50>;
-        key-positions = <22 23>;
-        bindings = <&sk LCTRL>;
-      };
       l_shift {
         timeout-ms = <50>;
-        key-positions = <23 24>;
+        key-positions = <22 23>;
         bindings = <&sk LSHFT>;
+      };
+
+      l_gui {
+        timeout-ms = <50>;
+        key-positions = <23 24>;
+        bindings = <&sk LGUI>;
+      };
+
+      l_gui_thumb {
+        timeout-ms = <50>;
+        key-positions = <31 32>;
+        bindings = <&sk LGUI>;
+      };
+
+
+      r_gui_thumb {
+        timeout-ms = <50>;
+        key-positions = <33 34>;
+        bindings = <&sk RGUI>;
       };
 
       r_gui {
         timeout-ms = <50>;
-        key-positions = <28 29>;
+        key-positions = <25 26>;
         bindings = <&sk RGUI>;
+      };
+
+      r_shift {
+        timeout-ms = <50>;
+        key-positions = <26 27>;
+        bindings = <&sk RSHFT>;
       };
       r_alt {
         timeout-ms = <50>;
@@ -93,13 +107,8 @@
       };
       r_ctrl {
         timeout-ms = <50>;
-        key-positions = <26 27>;
+        key-positions = <28 29>;
         bindings = <&sk RCTRL>;
-      };
-      r_shift {
-        timeout-ms = <50>;
-        key-positions = <25 26>;
-        bindings = <&sk RSHFT>;
       };
       
   };
@@ -160,9 +169,9 @@
 
       num_layer {
               bindings = <
-            &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT          &none &none &none &none &none   
-          &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &none &sk LSHFT &sk LCTRL &sk LALT &sk LGUI 
-          &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH          &none &none &none &sk RALT &none 
+            &kp LBKT &kp N9 &kp N8 &kp N7 &kp RBKT          &none &none &none &none &none   
+          &kp SEMI &kp N6 &kp N5 &kp N4 &kp EQUAL          &none &sk LSHFT &sk LCTRL &sk LALT &sk LGUI 
+          &kp GRAVE &kp N3 &kp N2 &kp N1 &kp BSLH          &none &none &none &sk RALT &none 
                           &kp DOT &kp N0 &kp MINUS          &none &none &none       
 
               >;
@@ -173,10 +182,10 @@
 
       num_right_layer {
             bindings = <
-              &none &none &none &none &none           &kp LBKT &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp RBKT 
-&sk LGUI &sk LALT &sk LCTRL &sk LSHFT &none           &kp EQL &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp SQT 
-           &none &sk RALT &none &none &none           &kp BSLH &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp GRAVE 
-                          &none &none &none           &kp MINUS &kp NUM_0 &kp DOT 
+              &none &none &none &none &none           &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT 
+&sk LGUI &sk LALT &sk LCTRL &sk LSHFT &none           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp SQT 
+           &none &sk RALT &none &none &none           &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
+                          &none &none &none           &kp MINUS &kp N0 &kp DOT 
 
             >;
 
