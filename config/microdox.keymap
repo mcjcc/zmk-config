@@ -76,6 +76,11 @@
       };
 
       
+      l_shift_pinky {
+        timeout-ms = <50>;
+        key-positions=<10 20>;
+        bindings=<&sk LSHFT>;
+      };
 
       l_gui_thumb {
         timeout-ms = <50>;
@@ -89,6 +94,13 @@
         key-positions = <33 34>;
         bindings = <&sk RGUI>;
       };
+
+      r_shift_pinky {
+        timeout-ms = <50>;
+        key-positions=<19 29>;
+        bindings=<&sk RSHFT>;
+      };
+
 
       r_alt {
         timeout-ms = <50>;
@@ -132,10 +144,10 @@
 
       default_layer {
         bindings = <
-                      &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &k p O &kp P             
+                      &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SEMI      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-        &lt MEDIA ESC &lt NAV TAB &lt NUM_RIGHT RET          &lt SYM RET &lt NUM SPACE &lt FUN BSPC 
+        &lt MEDIA ESC &lt NAV TAB &lt NUM_RIGHT RET          &lt NUM RET &lt SYM SPACE &lt FUN BSPC 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -146,8 +158,8 @@
       nav_layer {
               bindings = <
                     &none &none &none &none &none          &none &none &none &none &none              
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp CAPS  
-              &none  &sk RALT  &none  &none  &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp INS 
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT  
+              &none  &sk RALT  &none  &none  &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp CAPS 
                                 &none &none &none          &kp RET &kp SPACE &kp DEL         
               >;
 
@@ -172,7 +184,7 @@
       num_layer {
               bindings = <
             &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT          &none &none &none &none &none   
-          &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
+          &kp PLUS &kp N4 &kp N5 &kp N6 &kp EQUAL          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
           &kp GRAVE &kp N1 &kp N2 &kp N3 &kp BSLH          &none &none &none &sk RALT &none 
                           &kp DOT &kp N0 &kp MINUS          &none &none &none       
 
@@ -185,7 +197,7 @@
       num_right_layer {
             bindings = <
               &none &none &none &none &none           &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT 
-&sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp SQT 
+&sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp PLUS 
            &none &sk RALT &none &none &none           &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
                           &none &none &none           &kp MINUS &kp N0 &kp DOT 
 
