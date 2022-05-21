@@ -157,7 +157,7 @@
 
       nav_layer {
               bindings = <
-                    &none &none &none &none &none          &none &none &none &none &none              
+                    &none &none &none &none &none          &kp LBKT &kp RBKT &kp LPAR &kp RPAR &kp BSPC              
       &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT  
               &none  &none  &none  &sk LALT  &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp CAPS 
                                 &none &none &none          &kp RET &kp SPACE &kp DEL         
