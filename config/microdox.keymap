@@ -52,7 +52,18 @@
         bindings = <&sk LALT>;
       };
 
-      
+      l_sqt {
+        timeout-ms = <50>;
+        key-positions=<31 19>;
+        bindings=<&sk SQT>;
+      };
+
+      l_dqt {
+        timeout-ms = <50>;
+        key-positions=<10 31 19>;
+        bindings=<&sk DQT>;
+      };
+
       l_shift_pinky {
         timeout-ms = <50>;
         key-positions=<10 20>;
@@ -64,7 +75,6 @@
         key-positions = <31 32>;
         bindings = <&sk LGUI>;
       };
-
 
       r_gui_thumb {
         timeout-ms = <50>;
@@ -134,7 +144,7 @@
 
       nav_layer {
               bindings = <
-                    &none &none &none &none &none          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
+                &none &none &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
       &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT  
      &kp LG(Z) &kp LG(X) &kp LG(C) &sk LALT &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp BSPC 
                                 &none &none &none          &kp RET &kp SPACE &kp SPACE         
