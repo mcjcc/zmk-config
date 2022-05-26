@@ -132,9 +132,9 @@
       default_layer {
         bindings = <
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
-                      &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SEMI      
+                      &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-        &lt MEDIA ESC &lt NAV LGUI &lt NUM_RIGHT RET          &lt NUM SPACE &lt SYM TAB &lt FUN BSPC 
+        &lt MEDIA ESC &lt NUM_RIGHT SPACE  &lt NAV RET         &kp SPACE &lt SYM TAB  &lt FUN BSPC 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -145,9 +145,9 @@
       nav_layer {
               bindings = <
          &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SQT  
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
      &kp LG(Z) &kp LG(X) &kp LG(C) &sk LALT &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp BSPC 
-                                &none &none &none          &kp SPACE &kp SPACE &kp DEL         
+                                &none &none &none          &kp SPACE &kp TAB &kp DEL         
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
