@@ -29,7 +29,31 @@
 
 / {
   combos {
-    compatible = "zmk,combos";
+    compatible = "zmk,combos";   
+
+      bpsc {
+        timeout-ms = <50>;
+        key-positions=<8 9>;
+        bindings=<&kp BSPC>;
+       };
+
+      bpsc_2 {
+        timeout-ms = <50>;
+        key-positions=<8 9>;
+        bindings=<&kp BSPC>;
+       };
+       
+      sqt {
+        timeout-ms = <50>;
+        key-positions=<31 19>;
+        bindings=<&kp SQT>;
+      };
+
+      dqt {
+        timeout-ms = <50>;
+        key-positions=<10 31 19>;
+        bindings=<&kp DQT>;
+      };
     
       l_shift {
         timeout-ms = <50>;
@@ -50,18 +74,6 @@
         timeout-ms = <50>;
         key-positions = <23 24>;
         bindings = <&sk LALT>;
-      };
-
-      l_sqt {
-        timeout-ms = <50>;
-        key-positions=<31 19>;
-        bindings=<&sk SQT>;
-      };
-
-      l_dqt {
-        timeout-ms = <50>;
-        key-positions=<10 31 19>;
-        bindings=<&sk DQT>;
       };
 
       l_shift_pinky {
@@ -145,9 +157,9 @@
       nav_layer {
               bindings = <
          &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
-     &kp LG(Z) &kp LG(X) &kp LG(C) &sk LALT &none          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp BSPC 
-                                &none &none &none          &kp SPACE &kp TAB &kp DEL         
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
+     &kp LG(Z) &kp LG(X) &kp LG(C) &sk LALT &kp GRAVE          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp BSPC 
+                                &none &none &kp RET          &kp SPACE &kp TAB &kp DEL         
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
