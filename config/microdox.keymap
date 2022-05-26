@@ -35,7 +35,13 @@
         key-positions=<30 31>;
         bindings=<&kp SPACE>;
       };
-      
+
+      bpsc {
+        timeout-ms = <50>;
+        key-positions=<18 19>;
+        bindings=<&kp BSPC>;
+       };
+
       bpsc {
         timeout-ms = <50>;
         key-positions=<8 9>;
@@ -142,7 +148,6 @@
       bindings = <&kp>, <&kp>;
     };
   };
-     
     keymap {
       compatible = "zmk,keymap";
 
