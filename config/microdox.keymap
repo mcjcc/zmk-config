@@ -30,7 +30,12 @@
 / {
   combos {
     compatible = "zmk,combos";   
-
+      space {  
+        timeout-ms = <50>;
+        key-positions=<30 31>;
+        bindings=<&kp SPACE>;
+      };
+      
       bpsc {
         timeout-ms = <50>;
         key-positions=<8 9>;
