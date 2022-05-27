@@ -35,16 +35,10 @@
         key-positions=<30 31>;
         bindings=<&kp SPACE>;
       };
-   
-      bpsc_1 {
+
+      bpsc {
         timeout-ms = <50>;
         key-positions=<18 19>;
-        bindings=<&kp BSPC>;
-       };
-
-      bpsc_2 {
-        timeout-ms = <50>;
-        key-positions=<8 9>;
         bindings=<&kp BSPC>;
        };
        
