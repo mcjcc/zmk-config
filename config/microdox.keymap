@@ -40,22 +40,40 @@
         timeout-ms = <50>;
         key-positions=<18 19>;
         bindings=<&kp BSPC>;
+       };  
+
+      bpsc_2 {
+        timeout-ms = <50>;
+        key-positions=<1 6>;
+        bindings=<&kp BSPC>;
        };
        
-      sqt {
+      // sqt {
+      //   timeout-ms = <50>;
+      //   key-positions=<31 19>;
+      //   bindings=<&kp SQT>;
+      // };
+
+      // dqt {
+      //   timeout-ms = <50>;
+      //   key-positions=<10 31 19>;
+      //   bindings=<&kp DQT>;
+      // };
+
+      semi_colon {
         timeout-ms = <50>;
-        key-positions=<31 19>;
+        key-positions=<32 19>;
         bindings=<&kp SQT>;
       };
 
-      dqt {
+      colon  {
         timeout-ms = <50>;
-        key-positions=<10 31 19>;
+        key-positions=<10 32 19>;
         bindings=<&kp DQT>;
       };
     
       l_shift {
-        timeout-ms = <50>;
+        timeout-ms = <75>;
         key-positions = <20 21>;
         bindings = <&sk LSHFT>;
       };
@@ -76,7 +94,7 @@
       };
 
       l_shift_pinky {
-        timeout-ms = <50>;
+        timeout-ms = <75>;
         key-positions=<10 20>;
         bindings=<&sk LSHFT>;
       };
@@ -94,11 +112,10 @@
       };
 
       r_shift_pinky {
-        timeout-ms = <50>;
+        timeout-ms = <75>;
         key-positions=<19 29>;
         bindings=<&sk RSHFT>;
       };
-
 
       r_alt {
         timeout-ms = <50>;
@@ -119,7 +136,7 @@
       };
 
       r_shift {
-        timeout-ms = <50>;
+        timeout-ms = <75>;
         key-positions = <28 29>;
         bindings = <&sk RSHFT>;
       };
@@ -157,7 +174,7 @@
          &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
       &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
      &kp LG(Z) &kp LG(X) &kp LG(C) &sk LALT &kp GRAVE          &kp HOME  &kp PG_DN &kp PG_UP &kp END &kp BSPC 
-                                &none &none &kp RET          &kp SPACE &kp TAB &kp DEL         
+                                &none &kp RET &none          &kp SPACE &kp TAB &kp DEL         
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -196,7 +213,7 @@
           &kp LBKT &kp RBKT &kp LPAR &kp RPAR &none           &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT 
     &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp PLUS 
                   &none &none &none &sk LALT &none           &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
-                                 &none &none &none           &kp MINUS &kp N0 &kp DOT 
+                                 &none &none &none           &kp N0 &kp MINUS &kp DOT 
 
             >;
 
