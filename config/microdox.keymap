@@ -161,7 +161,7 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-        &lt MEDIA ESC &lt NUM_RIGHT SEMI  &lt NAV SPACE         &kp RET &lt SYM TAB &lt FUN BSPC 
+        &lt MEDIA ESC &lt NUM_RIGHT SEMI  &lt NAV RET         &kp SPACE &lt SYM TAB &lt FUN BSPC 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
