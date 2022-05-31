@@ -23,7 +23,7 @@
 &lt { quick_tap_ms = <200>; };
 
 &sk {
-    release-after-ms = <2000>;
+    release-after-ms = <500>;
     quick-release;
 };
 
