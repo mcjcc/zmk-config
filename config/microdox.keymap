@@ -34,7 +34,7 @@
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <3 5>;
-            then-layer = <3>;
+            then-layer = <2>;
         };
     };
   combos {
