@@ -187,10 +187,10 @@
 
       media_layer {
               bindings = <
-              &none &none &none &none &none          &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
+              &none &none &kp C_VOLUME_DOWN &kp C_VOL_UP &none          &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
 &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &none          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
-    &none &none &kp LG(LEFT) &kp LG(RIGHT) &none          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
-                          &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
+    &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+                          &none &mo NUM_RIGHT &none          &kp C_STOP &kp C_PP &kp C_MUTE              
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -214,7 +214,7 @@
           &kp LBKT &kp RBKT &kp LPAR &kp RPAR &none           &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT 
     &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp PLUS 
                       &none &none &none &none &kp SPACE           &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
-                              &none &none &kp RET           &kp N0 &kp MINUS &kp DOT 
+                              &mo MEDIA &none &kp RET           &kp N0 &kp MINUS &kp DOT 
             >;
 
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
