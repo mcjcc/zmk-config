@@ -13,11 +13,12 @@
 
 #define BASE        0
 #define NAV         1
-#define MEDIA       2
-#define NUM         3
-#define NUM_RIGHT   4
-#define SYM         5
-#define FUN         6
+#define NAV_LEFT    2
+#define MEDIA       3
+#define NUM         4
+#define NUM_RIGHT   5
+#define SYM         6
+#define FUN         7
 
 
 &lt { quick_tap_ms = <200>; };
@@ -28,14 +29,16 @@
 };
 
 / {
+
+   conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <3 5>;
+            then-layer = <3>;
+        };
+    };
   combos {
     compatible = "zmk,combos";   
-      space {  
-        timeout-ms = <50>;
-        key-positions=<30 31>;
-        bindings=<&kp SPACE>;
-      };
-
       bpsc {
         timeout-ms = <50>;
         key-positions=<18 19>;
@@ -171,17 +174,28 @@
 
       nav_layer {
               bindings = <
-             &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
-        &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
+               &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
+          &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
        &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp GRAVE          &none   &kp PG_DN &kp PG_UP &none  &kp BSPC 
-                                &kp SPACE &kp RET &none          &kp SPACE &kp TAB &kp DEL         
+                                 &kp SPACE &kp RET &none          &kp SPACE &kp TAB &kp DEL         
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
       };
 
-    
+
+      nav_left_layer { 
+            bindings = <
+            &none &kp PG_DN &kp PG_UP &none &kp INS          &none  &none  &none  &none  &none     
+           &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &none  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
+                 &none &none &kp SPACE &kp RET &none          &none  &none  &none  &kp RALT &none  
+                           &kp DEL &kp BSPC &kp RET          &none  &none  &none &none
+        >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      }; 
+
+
 
       media_layer {
               bindings = <
@@ -243,6 +257,6 @@
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
 
-                
-  };
+ 
+}; 
 };
