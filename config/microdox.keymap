@@ -13,12 +13,13 @@
 
 #define BASE        0
 #define NAV         1
-#define NAV_LEFT    2
-#define MEDIA       3
-#define NUM         4
-#define NUM_RIGHT   5
-#define SYM         6
-#define FUN         7
+#define MEDIA       2
+#define NUM         3
+#define NUM_RIGHT   4
+#define SYM         5
+#define FUN         6
+#define NAV_LEFT    7
+
 
 
 &lt { quick_tap_ms = <200>; };
@@ -33,8 +34,8 @@
    conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
-            if-layers = <3 5>;
-            then-layer = <2>;
+            if-layers = <2 4>;
+            then-layer = <7>;
         };
     };
   combos {
@@ -184,19 +185,6 @@
 
       };
 
-
-      nav_left_layer { 
-            bindings = <
-            &none &kp PG_DN &kp PG_UP &none &kp INS          &none  &none  &none  &none  &none     
-           &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &none  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
-                 &none &none &kp SPACE &kp RET &none          &none  &none  &none  &kp RALT &none  
-                           &kp DEL &kp BSPC &kp RET          &none  &none  &none &none
-        >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-      }; 
-
-
-
       media_layer {
               bindings = <
               &none &none &none &none &none          &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
@@ -257,6 +245,14 @@
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
     };
 
- 
+   nav_left_layer { 
+            bindings = <
+            &none &kp PG_DN &kp PG_UP &none &kp INS          &none  &none  &none  &none  &none     
+           &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &none  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
+                 &none &none &kp SPACE &kp RET &none          &none  &none  &none  &kp RALT &none  
+                           &kp DEL &kp BSPC &kp RET          &none  &none  &none &none
+        >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      }; 
 }; 
 };
