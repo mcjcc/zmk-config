@@ -66,13 +66,13 @@
 
       semi_colon {
         timeout-ms = <50>;
-        key-positions=<32 19>;
+        key-positions=<19 32>;
         bindings=<&kp SEMI>;
       };
 
       colon  {
         timeout-ms = <50>;
-        key-positions=<10 32 19>;
+        key-positions=<10 19 32>;
         bindings=<&kp COLON>;
       };
     
