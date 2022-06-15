@@ -174,7 +174,7 @@
               bindings = <
                &kp BSPC &kp LG(W) &none &none &kp LG(T)          &kp CAPS &kp LBKT &kp RBKT &kp LPAR &kp RPAR              
           &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB          &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI  
-       &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp GRAVE          &none   &kp PG_DN &kp PG_UP &none  &kp BSPC 
+       &kp LG(Z) &kp LG(X) &kp LG(C) &kp LG(V) &kp GRAVE          &none &kp PG_DN &kp PG_UP &none  &kp BSPC 
                                  &kp SPACE &kp RET &none          &kp SPACE &kp TAB &kp DEL         
               >;
 
@@ -184,10 +184,10 @@
 
    nav_left_layer { 
             bindings = <
-            &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT          &kp CARET  &kp AMPS &kp ASTRK &kp LPAR &kp RPAR    
-           &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &none  &kp LSHFT &kp LCTRL &kp LALT &kp LGUI 
-                 &none &none &kp SPACE &kp RET &none          &none  &none  &none  &kp RALT &none  
-                           &none &mo NUM_RIGHT &none          &none  &none  &none &none
+            &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT          &kp CARET &kp AMPS &kp ASTRK &kp LPAR &kp RPAR    
+           &none &kp LEFT &kp UP &kp DOWN &kp RIGHT          &none &kp RALT &kp RGUI &kp RCTRL &kp RSHIFT 
+                 &none &none &kp SPACE &kp RET &none          &none &none &none &none &none  
+                           &none &mo NUM_RIGHT &none          &none &none &none &none
         >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
       }; 
@@ -232,7 +232,7 @@
 
     fun_layer{
               bindings = <
-            &kp F12 &kp F7 &kp F8 &kp F9 &none          &none &none &none &none &none  
+                &kp F12 &kp F7 &kp F8 &kp F9 &none          &none &none &none &none &none  
               &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
       &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK          &none &none &none &none &none 
                         &kp K_APP &kp SPACE &kp RET          &none &none &none  
@@ -246,7 +246,7 @@
               bindings = <
                        &none &none &none &none &none                    &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
        &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp TAB                              &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
-        &kp C_BRI_DN &kp C_BRI_UP &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+        &kp C_BRI_DN &kp C_BRI_UP &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_MUTE          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
                           &none &none &none                                        &kp C_STOP &kp C_PP &kp C_MUTE              
               >;
 
