@@ -37,6 +37,11 @@
     };
   combos {
     compatible = "zmk,combos";   
+      space { 
+        timeout-ms = <50>;
+        key-positions=<24 32>;
+        bindings=<&kp SPACE>;
+      };
       bpsc {
         timeout-ms = <50>;
         key-positions=<18 19>;
