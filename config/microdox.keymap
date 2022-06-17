@@ -166,9 +166,9 @@
    nav_layer { 
             bindings = <
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-          &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp EQUAL &kp MINUS &sk LBKT &sk RBKT &kp SEMI
-         &kp LSHIFT &sk LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp BSLH &none &kp COMMA &kp DOT &sk RSHIFT 
-                                       &mo NUM &kp LGUI &none          &sk RGUI &sk RALT &kp RCTRL 
+          &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp BSLH &kp LBKT &sk RBKT &sk BSLH &kp SEMI
+         &kp LSHIFT &sk LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &sk RALT 
+                                       &mo NUM &none &none          &sk RGUI &sk RSHIFT &kp DEL 
         >;  
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -176,7 +176,7 @@
       num_layer {
             bindings = <
           &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-    &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL           &kp EQUAL &kp N4 &kp N5 &kp N6 &kp PLUS 
+    &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL           &none &kp N4 &kp N5 &kp N6 &none 
                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0            &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
                               &none &mo NAV &kp RET           &kp N0 &kp MINUS &kp DOT 
             >;
