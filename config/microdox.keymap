@@ -52,17 +52,6 @@
         bindings=<&kp BSPC>;
        };
        
-      // sqt {
-      //   timeout-ms = <50>;
-      //   key-positions=<31 19>;
-      //   bindings=<&kp SQT>;
-      // };
-
-      // dqt {
-      //   timeout-ms = <50>;
-      //   key-positions=<10 31 19>;
-      //   bindings=<&kp DQT>;
-      // };
 
       semi_colon {
         timeout-ms = <50>;
@@ -166,7 +155,7 @@
    nav_layer { 
             bindings = <
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-          &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp BSLH &kp LBKT &sk RBKT &sk BSLH &kp SEMI
+          &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp BSLH &kp LBKT &kp RBKT &kp BSLH &kp SEMI
          &kp LSHIFT &sk LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &sk RALT 
                                        &mo NUM &none &none          &sk RGUI &sk RSHIFT &kp DEL 
         >;  
