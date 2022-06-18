@@ -144,7 +144,7 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-                &lt NUM ESC &lt NAV TAB &mt LGUI RET         &kp SPACE &mt RSHIFT TAB &lt FUN BSPC 
+                &mt LGUI ESC &lt NUM TAB &lt NAV RET         &kp SPACE &mt RSHIFT TAB &lt FUN BSPC 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -157,7 +157,7 @@
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
           &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp BSLH &kp LBKT &kp RBKT &kp BSLH &kp SEMI
          &kp LSHIFT &sk LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &sk RALT 
-                                       &mo NUM &none &none          &sk RGUI &sk RSHIFT &kp DEL 
+                                       &none &mo NUM &none          &sk RGUI &sk RSHIFT &kp DEL 
         >;  
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -167,7 +167,7 @@
           &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
     &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL           &none &kp N4 &kp N5 &kp N6 &none 
                      &kp N6 &kp N7 &kp N8 &kp N9 &kp N0            &kp BSLH &kp N1 &kp N2 &kp N3 &kp GRAVE 
-                              &none &mo NAV &kp RET           &kp N0 &kp MINUS &kp DOT 
+                              &none &none &mo NAV           &kp N0 &kp MINUS &kp DOT 
             >;
 
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
