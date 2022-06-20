@@ -75,65 +75,65 @@
       l_shift {
         timeout-ms = <75>;
         key-positions = <20 21>;
-        bindings = <&sk LSHFT>;
+        bindings = <&kp LSHFT>;
       };
       l_ctrl {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&sk LCTRL>;
+        bindings = <&kp LCTRL>;
       };
       l_gui {
         timeout-ms = <50>;
         key-positions = <22 23>;
-        bindings = <&sk LGUI>;
+        bindings = <&kp LGUI>;
       };
       l_alt {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&sk LALT>;
+        bindings = <&kp LALT>;
       };
 
       l_shift_pinky {
         timeout-ms = <75>;
         key-positions=<10 20>;
-        bindings=<&sk LSHFT>;
+        bindings=<&kp LSHFT>;
       };
 
 
       r_gui_thumb {
         timeout-ms = <50>;
         key-positions = <33 34>;
-        bindings = <&sk RGUI>;
+        bindings = <&kp RGUI>;
       };
 
       r_shift_pinky {
         timeout-ms = <75>;
         key-positions=<19 29>;
-        bindings=<&sk RSHFT>;
+        bindings=<&kp RSHFT>;
       };
 
       r_alt {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&sk RALT>;
+        bindings = <&kp RALT>;
       };
 
       r_gui {
         timeout-ms = <50>;
         key-positions = <26 27>;
-        bindings = <&sk RGUI>;
+        bindings = <&kp RGUI>;
       };
 
       r_ctrl {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&sk RCTRL>;
+        bindings = <&kp RCTRL>;
       };
 
       r_shift {
         timeout-ms = <75>;
         key-positions = <28 29>;
-        bindings = <&sk RSHFT>;
+        bindings = <&kp RSHFT>;
       };
       
   };
@@ -158,8 +158,8 @@
             bindings = <
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
           &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp BSLH &kp LBKT &kp RBKT &kp BSLH &kp SEMI
-         &kp LSHIFT &sk LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &sk RSHIFT 
-                                       &none &mo NUM &none          &sk RGUI &sk RALT &kp DEL 
+         &kp LSHIFT &kp LGUI &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
+                                       &none &mo NUM &none          &kp RGUI &kp RALT &kp DEL 
         >;  
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
