@@ -16,7 +16,6 @@
 #define FUN         4
 #define MEDIA       5
 
-
 &lt { quick_tap_ms = <200>; };
 
 &sk {
@@ -25,7 +24,6 @@
 };
 
 / {
-
    conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -47,18 +45,12 @@
         key-positions=<24 32>;
         bindings=<&kp SPACE>;
       };
+
       bpsc {
         timeout-ms = <50>;
         key-positions=<18 19>;
         bindings=<&kp BSPC>;
        };  
-
-      bpsc_2 {
-        timeout-ms = <50>;
-        key-positions=<1 6>;
-        bindings=<&kp BSPC>;
-       };
-       
 
       semi_colon {
         timeout-ms = <50>;
@@ -75,30 +67,32 @@
       l_shift {
         timeout-ms = <75>;
         key-positions = <20 21>;
-        bindings = <&kp LSHFT>;
+        bindings = <&sk LSHFT>;
       };
+
       l_ctrl {
         timeout-ms = <50>;
         key-positions = <21 22>;
-        bindings = <&kp LCTRL>;
+        bindings = <&sk LCTRL>;
       };
+
       l_gui {
         timeout-ms = <50>;
         key-positions = <22 23>;
-        bindings = <&kp LGUI>;
+        bindings = <&sk LGUI>;
       };
+
       l_alt {
         timeout-ms = <50>;
         key-positions = <23 24>;
-        bindings = <&kp LALT>;
+        bindings = <&sk LALT>;
       };
 
       l_shift_pinky {
         timeout-ms = <75>;
         key-positions=<10 20>;
-        bindings=<&kp LSHFT>;
+        bindings=<&sk LSHFT>;
       };
-
 
       r_gui_thumb {
         timeout-ms = <50>;
@@ -109,31 +103,31 @@
       r_shift_pinky {
         timeout-ms = <75>;
         key-positions=<19 29>;
-        bindings=<&kp RSHFT>;
+        bindings=<&sk RSHFT>;
       };
 
       r_alt {
         timeout-ms = <50>;
         key-positions = <25 26>;
-        bindings = <&kp RALT>;
+        bindings = <&sk RALT>;
       };
 
       r_gui {
         timeout-ms = <50>;
         key-positions = <26 27>;
-        bindings = <&kp RGUI>;
+        bindings = <&sk RGUI>;
       };
 
       r_ctrl {
         timeout-ms = <50>;
         key-positions = <27 28>;
-        bindings = <&kp RCTRL>;
+        bindings = <&sk RCTRL>;
       };
 
       r_shift {
         timeout-ms = <75>;
         key-positions = <28 29>;
-        bindings = <&kp RSHFT>;
+        bindings = <&sk RSHFT>;
       };
       
   };
