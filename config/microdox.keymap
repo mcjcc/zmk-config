@@ -35,9 +35,9 @@
   combos {
     compatible = "zmk,combos";   
       media_layer {
-        tiemout-ms = <50>;
-        key-positions = <31 32>; 
-        bindings = <&mo MEDIA>;
+        timeout-ms = <50>;
+        key-positions=<31 32>; 
+        bindings=<&mo MEDIA>;
       };
 
       fn_layer { 
