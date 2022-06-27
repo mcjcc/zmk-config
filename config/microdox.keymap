@@ -163,7 +163,7 @@
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
               &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LBKT &kp DOWN &kp UP &kp RBKT &kp SEMI
       &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp GRAVE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
-                                    &none &kp LGUI &none          &kp RGUI &kp DEL &kp RALT 
+                                    &none &kp LGUI &none          &kp RGUI &kp RALT &kp DEL 
         >;  
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -205,14 +205,24 @@
 
       media_layer {
               bindings = <
-              &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR            &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
-                                &none &none &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
-                             &none &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR            &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
+                &none &kp LG(LBKT) &kp C_VOL_DN &kp C_VOL_UP &kp LG(RBKT)          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+                        &kp C_MUTE  &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
                                                             &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
               >;
 
       sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
       };
+      
+      other_nav_layer {
+        bindings = <
+        
+        
+        >;
+
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      }
+
 
 }; 
 };  
