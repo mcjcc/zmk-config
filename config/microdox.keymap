@@ -34,6 +34,13 @@
   //   };
   combos {
     compatible = "zmk,combos";   
+
+      tab {
+        timeout-ms = <50>;
+        key-positions=<12 13>; 
+        bindings=<&kb TAB>;
+      };
+
       media_layer {
         timeout-ms = <50>;
         key-positions=<31 32>; 
@@ -205,13 +212,13 @@
 
       media_layer {
               bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR            &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
-                &kp C_MUTE &kp LG(LBKT) &kp C_VOL_DN &kp C_VOL_UP &kp LG(RBKT)          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
-                        &kp LSHIFT  &kp C_PREV &kp C_BRI_DN &kp C_BRI_UP &kp C_NEXT          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
-                                                            &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
+                        &kp C_MUTE &kp C_PREV &kp LG(MINUS) &kp LG(EQUAL) &kp C_NEXT         &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
+                        &kp LG(N0) &kp LG(LBKT) &kp C_VOL_DN &kp C_VOL_UP &kp LG(RBKT)          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+        &kp LSHIFT &kp LG(LSHFT(LBKT)) &kp C_BRI_DN &kp C_BRI_UP &kp LG(LSHIFT(LBKT))          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+                                                                    &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
               >;
 
-      sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
       };
       
 }; 
