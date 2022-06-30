@@ -38,7 +38,7 @@
       tab {
         timeout-ms = <50>;
         key-positions=<12 13>; 
-        bindings=<&kb TAB>;
+        bindings=<&kp TAB>;
       };
 
       media_layer {
