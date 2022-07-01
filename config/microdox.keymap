@@ -182,7 +182,7 @@
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
               &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LBKT &kp DOWN &kp UP &kp RBKT &kp SEMI
       &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp SPACE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
-                                    &none &kp LGUI &none          &kp RGUI &kp DEL &kp RALT 
+                                    &none &kp LGUI &none          &kp SPACE &kp DEL &kp RALT 
         >;      
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -224,9 +224,9 @@
 
       media_layer {
               bindings = <
-                        &kp C_MUTE &kp C_PREV &kp LG(MINUS) &kp LG(EQUAL) &kp C_NEXT         &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
-              &kp LG(N0) &kp LG(LS(LBKT)) &kp C_VOL_DN &kp C_VOL_UP &kp LG(LS(RBKT))          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
-                      &kp LSHIFT &kp LG(LBKT) &kp C_BRI_DN &kp C_BRI_UP &kp LG(RBKT)          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+                        &kp C_MUTE &kp LG(MINUS) &kp LG(EQUAL) &kp C_PREV &kp C_NEXT         &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
+              &kp LG(N0) &kp C_VOL_DN &kp C_VOL_UP &kp LG(LS(LBKT)) &kp LG(LS(RBKT))          &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+                      &kp LSHIFT &kp C_BRI_DN &kp C_BRI_UP &kp LG(LEFT) &kp LG(RIGHT)          &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
                                                                     &none &none &none          &kp C_STOP &kp C_PP &kp C_MUTE              
               >;
 
