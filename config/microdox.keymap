@@ -10,11 +10,12 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define BASE        0
-#define NAV         1
-#define NUM         2
-#define SYM         3
-#define FUN         4
-#define MEDIA       5
+#define CMK_DH      1
+#define NAV         2
+#define NUM         3
+#define SYM         4
+#define FUN         5
+#define MEDIA       6
 
 &lt { quick_tap_ms = <200>; };
 
@@ -24,143 +25,188 @@
 };
 
 / {
-  //  conditional_layers {
-  //       compatible = "zmk,conditional-layers";
-  //       tri_layer {
-  //           if-layers = <1 2>;
-  //           then-layer = <5>;
-  //       };
+  behaviors { 
+    tdLGUI: tap_dance_0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_0";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&kp LGUI>, <&kp LS(LGUI)>;
 
-  //   };
+    };
+  };
   combos {
     compatible = "zmk,combos";   
 
-     left_bspc {
-        timeout-ms = <50>;
-        key-positions=<0 1>;
-        bindings=<&kp BSPC>;
-     };
+    toggle_cmk_dh {
+      timeout-ms = <50>;
+      key-positions=<0 1 8 9>;
+      bindings=<&tog CMK_DH>;
+    };
 
-      shift_tab {
-        timeout-ms = <50>;
-        key-positions=<11 12>; 
-        bindings=<&kp LS(TAB)>;
-      };
+    media_layer {
+      timeout-ms = <50>;
+      key-positions=<31 32>; 
+      bindings=<&mo MEDIA>;
+    };
 
-      tab {
-        timeout-ms = <50>;
-        key-positions=<12 13>; 
-        bindings=<&kp TAB>;
-      };
+    fn_layer { 
+      timeout-ms = <50>;
+      key-positions=<34 35>;
+      bindings=<&mo FUN>;
+    }; 
 
-      media_layer {
-        timeout-ms = <50>;
-        key-positions=<31 32>; 
-        bindings=<&mo MEDIA>;
-      };
+    left_bspc {
+      timeout-ms = <50>;
+      key-positions=<0 1>;
+      bindings=<&kp BSPC>;
+    };
 
-      fn_layer { 
-        timeout-ms = <50>;
-        key-positions=<34 35>;
-        bindings=<&mo FUN>;
-      }; 
+    tab {
+      timeout-ms = <50>;
+      key-positions=<1 11>;
+      bindings=<&kp tab>;
+    };
 
-      caps { 
-        timeout-ms = <50>;
-        key-positions=<30 31>;
-        bindings=<&kp CAPS>;
-      };
+    shift_tab {
+      timeout-ms = <50>;
+      key-positions=<0 10>;
+      bindings=<&kp LS(TAB)>;
+    };
 
-      space { 
-        timeout-ms = <50>;
-        key-positions=<24 32>;
-        bindings=<&kp SPACE>;
-      };
+    left {
+      timeout-ms = <50>;
+      key-positions=<11 21>; 
+      bindings=<&kp DOWN>;
+    };
 
-      bpsc {
-        timeout-ms = <50>;
-        key-positions=<18 19>;
-        bindings=<&kp BSPC>;
-       };  
+    up {
+      timeout-ms = <50>;
+      key-positions=<12 22>; 
+      bindings=<&kp UP>;
+    };
 
-      semi_colon {
-        timeout-ms = <50>;
-        key-positions=<19 32>;
-        bindings=<&kp SEMI>;
-      };
+    down {
+      timeout-ms = <50>;
+      key-positions=<13 23>; 
+      bindings=<&kp DOWN>;
+    };
 
-      colon  {
-        timeout-ms = <50>;
-        key-positions=<10 19 32>;
-        bindings=<&kp COLON>;
-      };
+    right {
+      timeout-ms = <50>;
+      key-positions=<14 24>; 
+      bindings=<&kp DOWN>;
+    };
+
+    rbkt {
+      timeout-ms = <50>;
+      key-positions=<14 24>; 
+      bindings=<&kp RBKT>;
+    };
+
+    lbkt {
+      timeout-ms = <50>;
+      key-positions=<1 11>; 
+      bindings=<&kp RBKT>;
+    };
+
+    caps { 
+      timeout-ms = <50>;
+      key-positions=<5 6>;
+      bindings=<&kp CAPS>;
+    };
+
+    space { 
+      timeout-ms = <50>;
+      key-positions=<24 32>;
+      bindings=<&kp SPACE>;
+    };
+
+    bpsc {
+      timeout-ms = <50>;
+      key-positions=<9 19>;
+      bindings=<&kp BSPC>;
+      };  
+
+    semi_colon {
+      timeout-ms = <50>;
+      key-positions=<19 32>;
+      bindings=<&kp SEMI>;
+    };
+
+    colon  {
+      timeout-ms = <50>;
+      key-positions=<10 19 32>;
+      bindings=<&kp COLON>;
+    };
+  
+    // modifiers
+    l_shift {
+      timeout-ms = <75>;
+      key-positions = <20 21>;
+      bindings = <&sk LSHFT>;
+    };
+
+    l_ctrl {
+      timeout-ms = <50>;
+      key-positions = <21 22>;
+      bindings = <&sk LCTRL>;
+    };
+
+    l_gui {
+      timeout-ms = <50>;
+      key-positions = <22 23>;
+      bindings = <&sk LGUI>;
+    };
+
+    l_alt {
+      timeout-ms = <50>;
+      key-positions = <23 24>;
+      bindings = <&sk LALT>;
+    };
+
+    l_shift_pinky {
+      timeout-ms = <75>;
+      key-positions=<10 20>;
+      bindings=<&kp LSHFT>;
+    };
+
+    r_gui_thumb {
+      timeout-ms = <50>;
+      key-positions = <33 34>;
+      bindings = <&kp RGUI>;
+    };
+
+    r_shift_pinky {
+      timeout-ms = <75>;
+      key-positions=<19 29>;
+      bindings=<&sk RSHFT>;
+    };
+
+    r_alt {
+      timeout-ms = <50>;
+      key-positions = <25 26>;
+      bindings = <&sk RALT>;
+    };
+
+    r_gui {
+      timeout-ms = <50>;
+      key-positions = <26 27>;
+      bindings = <&sk RGUI>;
+    };
+
+    r_ctrl {
+      timeout-ms = <50>;
+      key-positions = <27 28>;
+      bindings = <&sk RCTRL>;
+    };
+
+    r_shift {
+      timeout-ms = <75>;
+      key-positions = <28 29>;
+      bindings = <&sk RSHFT>;
+    };
     
-      l_shift {
-        timeout-ms = <75>;
-        key-positions = <20 21>;
-        bindings = <&sk LSHFT>;
-      };
-
-      l_ctrl {
-        timeout-ms = <50>;
-        key-positions = <21 22>;
-        bindings = <&sk LCTRL>;
-      };
-
-      l_gui {
-        timeout-ms = <50>;
-        key-positions = <22 23>;
-        bindings = <&sk LGUI>;
-      };
-
-      l_alt {
-        timeout-ms = <50>;
-        key-positions = <23 24>;
-        bindings = <&sk LALT>;
-      };
-
-      l_shift_pinky {
-        timeout-ms = <75>;
-        key-positions=<10 20>;
-        bindings=<&sk LSHFT>;
-      };
-
-      r_gui_thumb {
-        timeout-ms = <50>;
-        key-positions = <33 34>;
-        bindings = <&kp RGUI>;
-      };
-
-      r_shift_pinky {
-        timeout-ms = <75>;
-        key-positions=<19 29>;
-        bindings=<&sk RSHFT>;
-      };
-
-      r_alt {
-        timeout-ms = <50>;
-        key-positions = <25 26>;
-        bindings = <&sk RALT>;
-      };
-
-      r_gui {
-        timeout-ms = <50>;
-        key-positions = <26 27>;
-        bindings = <&sk RGUI>;
-      };
-
-      r_ctrl {
-        timeout-ms = <50>;
-        key-positions = <27 28>;
-        bindings = <&sk RCTRL>;
-      };
-
-      r_shift {
-        timeout-ms = <75>;
-        key-positions = <28 29>;
-        bindings = <&sk RSHFT>;
-      };
-      
   };
 
     keymap {
@@ -171,7 +217,18 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-                    &lt NUM ESC &sk LGUI &lt NAV RET         &kp SPACE &kp BSPC &mt RSHIFT TAB 
+                    &lt NUM ESC &tdLGUI &lt NAV RET         &kp SPACE &kp BSPC &mt RSHIFT TAB 
+        >;
+                                
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+      };
+
+      colemak_dh_layer {
+        bindings = <
+                      &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U &kp Y &kp SQT             
+                      &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E &kp I &kp O      
+                      &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp SLASH  
+                    &lt NUM ESC &tdLGUI &lt NAV RET         &kp SPACE &kp BSPC &mt RSHIFT TAB 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -182,7 +239,7 @@
                       &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
               &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LBKT &kp DOWN &kp UP &kp RBKT &kp SEMI
       &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp SPACE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
-                                    &none &kp LGUI &none          &kp SPACE &kp DEL &kp RALT 
+                                    &kp ESC &tdLGUI &none          &kp SPACE &kp DEL &kp RALT 
         >;      
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
