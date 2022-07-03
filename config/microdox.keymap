@@ -31,7 +31,7 @@
       label = "TAP_DANCE_0";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp LGUI>, <&kp LS(LGUI)>;
+      bindings = <&kp LGUI>, <&kp LS(LG)>;
 
     };
   };
@@ -52,7 +52,7 @@
 
     fn_layer { 
       timeout-ms = <50>;
-      key-positions=<30 32>;
+      key-positions=<30 31>;
       bindings=<&mo FUN>;
     }; 
 
@@ -64,20 +64,32 @@
 
     tab {
       timeout-ms = <50>;
-      key-positions=<3 13>;
+      key-positions=<4 14>;
       bindings=<&kp TAB>;
     };
 
     shift_tab {
       timeout-ms = <50>;
-      key-positions=<2 12>;
+      key-positions=<3 13>;
       bindings=<&kp LS(TAB)>;
+    };
+
+    lbkt {
+      timeout-ms = <50>;
+      key-positions=<1 11>; 
+      bindings=<&kp LBKT>;
+    };
+
+    rbkt {
+      timeout-ms = <50>;
+      key-positions=<2 12>; 
+      bindings=<&kp RBKT>;
     };
 
     left {
       timeout-ms = <50>;
       key-positions=<11 21>; 
-      bindings=<&kp DOWN>;
+      bindings=<&kp LEFT>;
     };
 
     up {
@@ -95,19 +107,7 @@
     right {
       timeout-ms = <50>;
       key-positions=<14 24>; 
-      bindings=<&kp DOWN>;
-    };
-
-   lbkt {
-      timeout-ms = <50>;
-      key-positions=<0 10>; 
-      bindings=<&kp LBKT>;
-    };
-
-    rbkt {
-      timeout-ms = <50>;
-      key-positions=<1 11>; 
-      bindings=<&kp RBKT>;
+      bindings=<&kp RIGHT>;
     };
 
     caps { 
