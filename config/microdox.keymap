@@ -19,19 +19,19 @@
 
 &lt { quick_tap_ms = <200>; };
 
-&sk {
+&sk { // sticky key
     release-after-ms = <500>;
     quick-release;
 };
 
 / {
   behaviors { 
-    tdLGUI: tap_dance_0 {
+    tdLGUI: tap_dance_LGUI {
       compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_0";
+      label = "TAP_DANCE_LGUI";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
-      bindings = <&kp LGUI>, <&kp LS(LG)>;
+      bindings = <&kp LGUI>, <&sk LS(LGUI)>;
 
     };
   };
