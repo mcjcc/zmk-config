@@ -18,13 +18,14 @@
 #define MEDIA       6
 
 &lt {
-   quick_tap_ms = <50>;
-   flavor = "hold-preferred";
+  tapping-term-ms = <50>;
+  quick-tap-ms = <200>;
+  flavor = "hold-preferred";
 };
 
 &sk { // sticky key
-    release-after-ms = <500>;
-    quick-release;
+  release-after-ms = <500>;
+  quick-release;
 };
 
 / {
