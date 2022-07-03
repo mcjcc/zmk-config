@@ -52,7 +52,7 @@
 
     fn_layer { 
       timeout-ms = <50>;
-      key-positions=<34 35>;
+      key-positions=<30 32>;
       bindings=<&mo FUN>;
     }; 
 
@@ -64,13 +64,13 @@
 
     tab {
       timeout-ms = <50>;
-      key-positions=<1 11>;
-      bindings=<&kp tab>;
+      key-positions=<3 13>;
+      bindings=<&kp TAB>;
     };
 
     shift_tab {
       timeout-ms = <50>;
-      key-positions=<0 10>;
+      key-positions=<2 12>;
       bindings=<&kp LS(TAB)>;
     };
 
@@ -98,13 +98,13 @@
       bindings=<&kp DOWN>;
     };
 
-    rbkt {
+   lbkt {
       timeout-ms = <50>;
-      key-positions=<14 24>; 
-      bindings=<&kp RBKT>;
+      key-positions=<0 10>; 
+      bindings=<&kp LBKT>;
     };
 
-    lbkt {
+    rbkt {
       timeout-ms = <50>;
       key-positions=<1 11>; 
       bindings=<&kp RBKT>;
