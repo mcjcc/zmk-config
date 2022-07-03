@@ -17,8 +17,8 @@
 #define FUN         5
 #define MEDIA       6
 
-&lt {
-  tapping-term-ms = <100>;
+&lt { // layer-tap
+  tapping-term-ms = <125>;
   quick-tap-ms = <200>;
   flavor = "hold-preferred";
 };
