@@ -30,11 +30,11 @@
       compatible = "zmk,behavior-tap-dance";
       label = "TAP_DANCE_LGUI";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp LGUI>, <&sk LS(LGUI)>;
-
+      tapping-term-ms = <300>;
+      bindings = <&kp LGUI>, <&kp LS(LGUI)>;
     };
   };
+
   combos {
     compatible = "zmk,combos";   
 
