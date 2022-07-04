@@ -84,6 +84,18 @@
       bindings=<&kp TAB>;
     };
 
+    tab2 {
+      timeout-ms = <50>;
+      key-positions=<11 12 13>;
+      bindings=<&kp TAB>;
+    };
+
+    shift_tab {
+      timeout-ms = <50>;
+      key-positions=<21 22 23>;
+      bindings=<&kp LS(TAB)>;
+    };
+
     left {
       timeout-ms = <50>;
       key-positions=<11 21>; 
@@ -120,11 +132,17 @@
       bindings=<&kp SPACE>;
     };
 
+    enter {
+      timeout-ms = <50>;
+      key-positions=<25 33>;
+      bindings=<&kp RET>;
+    };
+
     bpsc {
       timeout-ms = <50>;
       key-positions=<9 19>;
       bindings=<&kp BSPC>;
-      };  
+    };  
 
     semi_colon {
       timeout-ms = <50>;
