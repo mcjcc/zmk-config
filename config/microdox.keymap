@@ -165,7 +165,7 @@
 
     l_shift_2 {
       timeout-ms = <75>;
-      slow-release = <true>;
+      slow-release = <1>;
       key-positions = <20 32>;
       bindings = <&sk LSHFT>;
     };
@@ -232,7 +232,7 @@
 
      r_shift_2 {
       timeout-ms = <75>;
-      slow-release = <true>;
+      slow-release = <1>;
       key-positions = <29 33>;
       bindings = <&sk RSHFT>;
     };
