@@ -163,6 +163,13 @@
       bindings = <&sk LSHFT>;
     };
 
+    l_shift_2 {
+      timeout-ms = <75>;
+      slow-release = <true>;
+      key-positions = <20 32>;
+      bindings = <&sk LSHFT>;
+    };
+
     l_ctrl {
       timeout-ms = <50>;
       key-positions = <21 22>;
@@ -222,7 +229,13 @@
       key-positions = <28 29>;
       bindings = <&sk RSHFT>;
     };
-    
+
+     r_shift_2 {
+      timeout-ms = <75>;
+      slow-release = <true>;
+      key-positions = <29 33>;
+      bindings = <&sk RSHFT>;
+    };
   };
 
     keymap {
