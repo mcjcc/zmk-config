@@ -78,11 +78,11 @@
       bindings=<&kp RBKT>;
     };
 
-    tab {
-      timeout-ms = <50>;
-      key-positions=<3 13>;
-      bindings=<&kp TAB>;
-    };
+    // tab {
+    //   timeout-ms = <50>;
+    //   key-positions=<3 13>;
+    //   bindings=<&kp TAB>;
+    // };
 
     tab2 {
       timeout-ms = <50>;
@@ -132,6 +132,12 @@
       bindings=<&kp SPACE>;
     };
 
+    space_2 { 
+      timeout-ms = <50>;
+      key-positions=<13 14>;
+      bindings=<&kp SPACE>;
+    };
+
     enter {
       timeout-ms = <50>;
       key-positions=<25 33>;
@@ -160,13 +166,6 @@
     l_shift {
       timeout-ms = <75>;
       key-positions = <20 21>;
-      bindings = <&sk LSHFT>;
-    };
-
-    l_shift_2 {
-      timeout-ms = <75>;
-      slow-release;
-      key-positions = <20 32>;
       bindings = <&sk LSHFT>;
     };
 
@@ -229,13 +228,6 @@
       key-positions = <28 29>;
       bindings = <&sk RSHFT>;
     };
-
-     r_shift_2 {
-      timeout-ms = <75>;
-      slow-release;
-      key-positions = <29 33>;
-      bindings = <&sk RSHFT>;
-    };
   };
 
     keymap {
@@ -245,8 +237,8 @@
         bindings = <
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
-                      &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp SLASH  
-                    &lt NUM ESC &tdLGUI &lt NAV RET         &kp SPACE &kp BSPC &mt RSHIFT TAB 
+                      &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp FSLH  
+                        &tdLGUI &lt NUM ESC &kp RET          &kp SPACE &kp BSPC &mt RSHIFT TAB 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -256,8 +248,8 @@
         bindings = <
                       &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U &kp Y &kp SQT             
                       &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E &kp I &kp O      
-                      &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp SLASH  
-                    &lt NUM ESC &tdLGUI &lt NAV RET         &kp SPACE &kp BSPC &mt RSHIFT TAB 
+                      &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH  
+                        &tdLGUI &lt NUM ESC &kp RET          &kp SPACE &kp BSPC &mt RSHIFT TAB 
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -265,8 +257,8 @@
 
    nav_layer { 
             bindings = <
-                      &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-              &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LBKT &kp DOWN &kp UP &kp RBKT &kp SEMI
+                      &none &none &none &none &none           &none &none &none &none &none 
+              &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI
       &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp SPACE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
                                     &kp ESC &tdLGUI &none          &kp SPACE &kp DEL &kp RALT 
         >;      
@@ -275,15 +267,16 @@
 
     num_layer {
                 bindings = <
-                    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp FSLH &kp N7 &kp N8 &kp N9 &kp MINUS 
-                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp ASTRK &kp N4 &kp N5 &kp N6 &kp PLUS 
-          &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp EQUAL            &kp BSLH &kp N1 &kp N2 &kp N3 &kp RET 
-                                    &none &none &none           &kp N0 &kp N0 &kp DOT 
+                    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
+                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp BSLH &kp SEMI 
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp GRAVE            &kp RBKT &kp N1 &kp N2 &kp N3 &kp RSHIFT 
+                                    &none &none &none           &kp SPACE &kp BSPC &kp RALT 
                 >;
 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
     };
+
     sym_layer {
                 bindings = <
         &kp LBRC &kp AMPS &kp ASTRK &kp UNDER &kp RBRC          &none &none &none &none &none   
