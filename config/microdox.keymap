@@ -46,16 +46,6 @@
       tapping-term-ms = <300>;
       bindings = <&kp RSHIFT>, <&kt RSHIFT>;
     };
-
-       
-    td_SPACE_ENTER: tap_dance_SPACE_ENTER {
-      compatible = "zmk,behavior-tap-dance";
-      label = "TAP_DANCE_ENTER";
-      #binding-cells = <0>;
-      tapping-term-ms = <300>;
-      bindings = <&kp SPACE>, <&kp RET>;
-    };
-
   };
 
   combos {
@@ -85,27 +75,15 @@
       bindings=<&kp BSPC>;
     };
 
-    lbkt {
+    tab {
       timeout-ms = <50>;
-      key-positions=<1 11>; 
-      bindings=<&kp LBKT>;
-    };
-
-    rbkt {
-      timeout-ms = <50>;
-      key-positions=<2 12>; 
-      bindings=<&kp RBKT>;
-    };
-
-    // tab {
-    //   timeout-ms = <50>;
-    //   key-positions=<3 13>;
-    //   bindings=<&kp TAB>;
-    // };
+      key-positions=<11 12 13>;
+      bindings=<&kp TAB>;
+    };  
 
     tab2 {
       timeout-ms = <50>;
-      key-positions=<11 12 13>;
+      key-positions=<16 17 18>;
       bindings=<&kp TAB>;
     };
 
@@ -115,9 +93,21 @@
       bindings=<&kp GRAVE>;
     };
 
+    grave2 {
+      timeout-ms = <50>;
+      key-positions=<6 7 8>;
+      bindings=<&kp GRAVE>;
+    };
+
     shift_tab {
       timeout-ms = <50>;
       key-positions=<21 22 23>;
+      bindings=<&kp LS(TAB)>;
+    };
+
+    shift_tab2 {
+      timeout-ms = <50>;
+      key-positions=<26 27 28>;
       bindings=<&kp LS(TAB)>;
     };
 
@@ -287,7 +277,7 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp FSLH  
-                       &lt NUM ESC &td_LGUI &td_SPACE_ENTER          &kp SPACE &kp BSPC &td_RSHIFT
+                &lt NUM ESC &td_LGUI &kp RET           &kp SPACE  &kp BSPC &td_RSHIFT
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -298,18 +288,19 @@
                       &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U &kp Y &kp SQT             
                       &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E &kp I &kp O      
                       &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH  
-                        &td_LGUI &lt NUM ESC &td_SPACE_ENTER          &td_SPACE_ENTER &kp BSPC &td_RSHIFT
+                      &lt NUM ESC &td_LGUI &kp RET           &kp SPACE  &kp BSPC &td_RSHIFT
+
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
       };
 
-   nav_layer { 
+   nav_layer {  // not being used
             bindings = <
                             &none &none &none &none &none           &none &none &none &none &none 
                &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI
        &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp SPACE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
-                                   &kp ESC &td_LGUI &none           &td_SPACE_ENTER &kp DEL &kp RALT 
+                                   &kp ESC &td_LGUI &none           &kp SPACE &kp DEL &kp RALT 
         >;      
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -326,7 +317,7 @@
 
     };
 
-    sym_layer {
+    sym_layer { // not being used  
                 bindings = <
         &kp LBRC &kp AMPS &kp ASTRK &kp UNDER &kp RBRC          &none &none &none &none &none   
       &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
