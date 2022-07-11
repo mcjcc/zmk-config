@@ -47,6 +47,15 @@
       bindings = <&kp RSHIFT>, <&kt RSHIFT>;
     };
 
+       
+    td_SPACE_ENTER: tap_dance_SPACE_ENTER {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_ENTER";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp SPACE>, <&kp RET>;
+    };
+
   };
 
   combos {
@@ -118,21 +127,45 @@
       bindings=<&kp LEFT>;
     };
 
+    left_2 {
+      timeout-ms = <50>;
+      key-positions=<15 25>; 
+      bindings=<&kp LEFT>;
+    };
+
     up {
       timeout-ms = <50>;
       key-positions=<12 22>; 
       bindings=<&kp UP>;
     };
-
+    
+    up_2 {
+      timeout-ms = <50>;
+      key-positions=<17 27>; 
+      bindings=<&kp UP>;
+    };
+    
     down {
       timeout-ms = <50>;
       key-positions=<13 23>; 
       bindings=<&kp DOWN>;
     };
-
+    
+    down_2 {
+      timeout-ms = <50>;
+      key-positions=<16 26>; 
+      bindings=<&kp DOWN>;
+    };
+    
     right {
       timeout-ms = <50>;
       key-positions=<14 24>; 
+      bindings=<&kp RIGHT>;
+    };
+
+    right_2 {
+      timeout-ms = <50>;
+      key-positions=<18 28>; 
       bindings=<&kp RIGHT>;
     };
 
@@ -254,7 +287,7 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp FSLH  
-                       &lt NUM ESC &td_LGUI &kp RET          &kp SPACE &kp BSPC &td_RSHIFT
+                       &lt NUM ESC &td_LGUI &td_SPACE_ENTER          &kp SPACE &kp BSPC &td_RSHIFT
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -265,7 +298,7 @@
                       &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U &kp Y &kp SQT             
                       &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E &kp I &kp O      
                       &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH  
-                        &td_LGUI &lt NUM ESC &kp RET          &kp SPACE &kp BSPC &td_RSHIFT
+                        &td_LGUI &lt NUM ESC &td_SPACE_ENTER          &td_SPACE_ENTER &kp BSPC &td_RSHIFT
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -276,7 +309,7 @@
                             &none &none &none &none &none           &none &none &none &none &none 
                &kp TAB &kp LEFT &kp UP &kp DOWN &kp RIGHT           &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp SEMI
        &kp LSHIFT &kp GRAVE &kp PG_UP &kp PG_DN &kp SPACE           &kp MINUS &kp EQUAL &kp COMMA &kp DOT &kp RSHIFT 
-                                   &kp ESC &td_LGUI &none           &kp SPACE &kp DEL &kp RALT 
+                                   &kp ESC &td_LGUI &none           &td_SPACE_ENTER &kp DEL &kp RALT 
         >;      
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>; 
       }; 
@@ -285,8 +318,8 @@
                 bindings = <
                     &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp BSLH &kp SEMI 
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp GRAVE            &kp RBKT &kp N1 &kp COMMA &kp DOT &kp RSHIFT 
-                                 &none &td_LGUI &none           &kp SPACE &kp BSPC &kp RALT 
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp GRAVE            &kp RBKT &none &kp COMMA &kp DOT &kp RSHIFT 
+                                 &none &td_LGUI &none           &td_SPACE_ENTER &kp BSPC &kp RALT 
                 >;
 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
