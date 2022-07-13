@@ -294,7 +294,7 @@
       default_layer {
         bindings = <
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
-                      &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
+                      &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp BSPC      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp FSLH  
                       &td_LGUI &lt NUM ESC &kp RET           &kp RET &kp SPACE &td_RGUI
         >;
@@ -328,7 +328,7 @@
                 bindings = <
                     &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
                     &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp RBKT &kp SEMI 
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp SPACE            &kp BSLH &kp DEL &kp COMMA &kp DOT &kp RSHIFT 
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp SPACE            &kp BSLH &kp SQT &kp COMMA &kp DOT &kp RSHIFT 
                                  &td_LGUI &none &kp RET           &kp RET &kp SPACE &td_RGUI 
                 >;
 
@@ -341,7 +341,7 @@
         &kp LBRC &kp AMPS &kp ASTRK &kp UNDER &kp RBRC          &none &none &none &none &none   
       &kp COLON &kp DLLR &kp PRCNT &kp CARET &kp PLUS          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
           &kp TILDE &kp EXCL &kp AT &kp HASH &kp PIPE          &none &none &none &none &none 
-                                    &none &none &none          &none &none &none              
+                                    &none &none &none          &none &none &none
                 >;
 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -350,7 +350,7 @@
 
     fun_layer{
               bindings = <
-                &kp F12 &kp F7 &kp F8 &kp F9 &none          &none &none &none &none &none  
+                &kp F12 &kp F7 &kp F8 &kp F9 &none          &none &none &none &none &kp N0  
               &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK          &none &sk RALT &sk RGUI &sk RCTRL &sk RSHFT 
       &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK          &none &none &none &none &none 
                         &kp K_APP &kp SPACE &kp RET          &none &none &none  
