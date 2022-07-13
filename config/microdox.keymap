@@ -257,12 +257,6 @@
       bindings=<&td_LSHIFT>;
     };
 
-    r_gui_thumb {
-      timeout-ms = <50>;
-      key-positions = <33 34>;
-      bindings = <&kp RGUI>;
-    };
-
     r_shift_pinky {
       timeout-ms = <75>;
       key-positions=<19 29>;
@@ -302,7 +296,7 @@
                       &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U &kp I &kp O &kp P             
                       &kp A &kp S &kp D &kp F &kp G          &kp H &kp J &kp K &kp L &kp SQT      
                       &kp Z &kp X &kp C &kp V &kp B          &kp N &kp M &kp COMMA &kp DOT &kp FSLH  
-                      &td_LGUI &lt NUM ESC &kp RET           &kp RET &lt NUM SPACE &td_RGUI
+                      &td_LGUI &lt NUM ESC &kp RET           &kp RET &kp SPACE &td_RGUI
         >;
                                 
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -313,7 +307,7 @@
                       &kp Q &kp W &kp F &kp P &kp B          &kp J &kp L &kp U &kp Y &kp SQT             
                       &kp A &kp R &kp S &kp T &kp G          &kp M &kp N &kp E &kp I &kp O      
                       &kp Z &kp X &kp C &kp D &kp V          &kp K &kp H &kp COMMA &kp DOT &kp FSLH  
-                      &td_LGUI &lt NUM ESC &kp RET           &kp RET &lt NUM SPACE &td_RGUI
+                      &td_LGUI &lt NUM ESC &kp RET           &kp RET &kp SPACE &td_RGUI
 
         >;
                                 
