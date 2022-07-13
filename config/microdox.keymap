@@ -310,8 +310,8 @@
     num_layer {
                 bindings = <
                     &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
-                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp BSLH &kp SEMI 
-      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp GRAVE            &kp RBKT &none &kp COMMA &kp DOT &kp RSHIFT 
+                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp RBKT &kp SEMI 
+      &sk LSHFT &sk LCTRL &sk LGUI &sk LALT &kp GRAVE            &kp BSLH &kp DEL &kp COMMA &kp DOT &kp RSHIFT 
                                  &td_LGUI &none &kp RET           &kp RET &kp BSPC &kp SPACE 
                 >;
 
