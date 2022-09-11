@@ -7,74 +7,322 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+
+
+#define BASE        0
+#define NAV         1
+#define NUM         2
+#define FUN         3
+#define MEDIA       4
+
+
+&lt { // layer-tap
+  tapping-term-ms = <200>;
+  quick-tap-ms = <200>;
+  flavor = "hold-preferred";
+};
 
 / {
+
+
+  behaviors { 
+    td_LGUI: tap_dance_LGUI {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_LGUI";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp LGUI>, <&kp LS(LGUI)>;
+    };
+
+
+    td_RGUI: tap_dance_RGUI {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_RGUI";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp RGUI>, <&kp LS(RGUI)>;
+    };
+
+    
+    td_RSHIFT: tap_dance_RSHIFT {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_RSHIFT";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp RSHIFT>, <&kt RSHIFT>;
+    };
+
+    td_LSHIFT: tap_dance_LSHIFT {
+      compatible = "zmk,behavior-tap-dance";
+      label = "TAP_DANCE_LSHIFT";
+      #binding-cells = <0>;
+      tapping-term-ms = <300>;
+      bindings = <&kp LSHIFT>, <&kt LSHIFT>;
+    };
+  };
+
+   combos {
+    compatible = "zmk,combos";   
+
+    // toggle_cmk_dh {
+    //   timeout-ms = <50>;
+    //   key-positions=<0 1 8 9>;
+    //   bindings=<&tog CMK_DH>;
+    // };
+
+    media_layer { 
+      timeout-ms = <50>;
+      key-positions=<32 33>;
+      bindings=<&mo MEDIA>;
+    }; 
+    
+
+    num_layer { 
+      timeout-ms = <50>;
+      key-positions=<35 36>;
+      bindings=<&mo NUM>;
+    }; 
+
+    fn_layer {
+      timeout-ms = <50>;
+      key-positions=<31 32>; 
+      bindings=<&mo FUN>;
+    };
+    
+    left_bspc {
+      timeout-ms = <50>;
+      key-positions=<0 10>;
+      bindings=<&kp BSPC>;
+    };
+
+    tab {
+      timeout-ms = <50>;
+      key-positions=<11 12 13>;
+      bindings=<&kp TAB>;
+    };  
+
+    tab2 {
+      timeout-ms = <50>;
+      key-positions=<16 17 18>;
+      bindings=<&kp TAB>;
+    };
+
+    grave {
+      timeout-ms = <50>;
+      key-positions=<1 2 3>;
+      bindings=<&kp GRAVE>;
+    };
+
+    grave2 {
+      timeout-ms = <50>;
+      key-positions=<6 7 8>;
+      bindings=<&kp GRAVE>;
+    };
+
+    shift_tab {
+      timeout-ms = <50>;
+      key-positions=<21 22 23>;
+      bindings=<&kp LS(TAB)>;
+    };
+
+    shift_tab2 {
+      timeout-ms = <50>;
+      key-positions=<26 27 28>;
+      bindings=<&kp LS(TAB)>;
+    };
+
+    left {
+      timeout-ms = <50>;
+      key-positions=<11 21>; 
+      bindings=<&kp LEFT>;
+    };
+
+    left_2 {
+      timeout-ms = <50>;
+      key-positions=<15 25>; 
+      bindings=<&kp LEFT>;
+    };
+
+    up {
+      timeout-ms = <50>;
+      key-positions=<12 22>; 
+      bindings=<&kp UP>;
+    };
+    
+    up_2 {
+      timeout-ms = <50>;
+      key-positions=<17 27>; 
+      bindings=<&kp UP>;
+    };
+    
+    down {
+      timeout-ms = <50>;
+      key-positions=<13 23>; 
+      bindings=<&kp DOWN>;
+    };
+    
+    down_2 {
+      timeout-ms = <50>;
+      key-positions=<16 26>; 
+      bindings=<&kp DOWN>;
+    };
+    
+    right {
+      timeout-ms = <50>;
+      key-positions=<14 24>; 
+      bindings=<&kp RIGHT>;
+    };
+
+    right_2 {
+      timeout-ms = <50>;
+      key-positions=<18 28>; 
+      bindings=<&kp RIGHT>;
+    };
+
+    caps { 
+      timeout-ms = <50>;
+      key-positions=<5 6>;
+      bindings=<&kp CAPS>;
+    };
+
+    space { 
+      timeout-ms = <50>;
+      key-positions=<24 34>;
+      bindings=<&kp SPACE>;
+    };
+
+    space_2 { 
+      timeout-ms = <50>;
+      key-positions=<13 14>;
+      bindings=<&kp SPACE>;
+    };
+
+    semi_colon {
+      timeout-ms = <50>;
+      key-positions=<19 34>;
+      bindings=<&kp SEMI>;
+    };
+
+    colon  {
+      timeout-ms = <50>;
+      key-positions=<10 19 34>;
+      bindings=<&kp COLON>;
+    };
+  
+    // modifiers
+    l_shift {
+      timeout-ms = <75>;
+      key-positions = <20 21>;
+      bindings = <&sk LSHFT>;
+    };
+
+    l_ctrl {
+      timeout-ms = <50>;
+      key-positions = <21 22>;
+      bindings = <&sk LCTRL>;
+    };
+
+    l_gui {
+      timeout-ms = <50>;
+      key-positions = <22 23>;
+      bindings = <&sk LGUI>;
+    };
+
+    l_alt {
+      timeout-ms = <50>;
+      key-positions = <23 24>;
+      bindings = <&sk LALT>;
+    };
+
+    l_shift_pinky {
+      timeout-ms = <75>;
+      key-positions=<10 20>;
+      bindings=<&td_LSHIFT>;
+    };
+
+    r_shift_pinky {
+      timeout-ms = <75>;
+      key-positions=<19 29>;
+      bindings=<&td_RSHIFT>;
+    };
+
+    r_alt {
+      timeout-ms = <50>;
+      key-positions = <25 26>;
+      bindings = <&sk RALT>;
+    };
+
+    r_gui {
+      timeout-ms = <50>;
+      key-positions = <26 27>;
+      bindings = <&sk RGUI>;
+    };
+
+    r_ctrl {
+      timeout-ms = <50>;
+      key-positions = <27 28>;
+      bindings = <&sk RCTRL>;
+    };
+
+    r_shift {
+      timeout-ms = <75>;
+      key-positions = <28 29>;
+      bindings = <&sk RSHFT>;
+    };
+  };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T   |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G   |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B   |   |  N  |  M   |  ,  |  .  |  /  |
-// |LCTRL| ALT | GUI | NAV | ENT  |   |BSPC | SYM  | SPC | [   | ]   |
                         bindings = <
    &kp Q &kp W &kp E &kp R &kp T                   &kp Y &kp U  &kp I     &kp O   &kp P
-   &kp A &kp S &kp D &kp F &kp G                   &kp H &kp J  &kp K     &kp L   &kp SEMI
+   &kp A &kp S &kp D &kp F &kp G                   &kp H &kp J  &kp K     &kp L   &kp SQT
    &kp Z &kp X &kp C &kp V &kp B                   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-   &kp LCTRL &kp LALT &kp LGUI &mo 1 &kp RET       &kp BSPC &mo 2 &kp SPACE &kp LBKT &kp RBKT
+   &kp LSHFT &kp LALT &lt NUM ESC &td_LGUI &kp RET       &kp RET &kp SPACE &td_RGUI &kp BSPC &kp RSHFT
                         >;
                                     
 
                 };
                 nav_layer {
-// -----------------------------------------------------------------------------------------
-// |BTCLR|     | ESC |  ~   |     |   | TAB | HOME |  UP  | END | DEL  |
-// | BT1 | GUI | ALT | CTRL | NUM |   |  /  | LEFT | DOWN | RGT | BKSP |
-// | BT2 |     |     |      |     |   |  \  | ENT  |      |     |      |
-//             |     |      |     |   |     |      |      |
                         bindings = <
-   &bt BT_CLR   &trans      &kp ESC  &kp TILDE &trans     &kp TAB  &kp HOME &kp UP   &kp END   &kp DEL
-   &bt BT_SEL 0 &kp K_CMENU &kp RALT &kp LCTRL &mo 3      &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &bt BT_SEL 1 &trans      &trans   &trans    &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-   &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
+   &trans &trans &trans &trans &trans             &trans &trans &ktrans &trans &trans
+   &trans &kp LEFT &kp UP &kp DOWN &kp RIGHT      &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp BSPC
+   &trans &trans &trans &trans &trans             &trans &trans &trans &trans &trans
+   &trans &trans &trans &trans &trans             &trans &trans &trans &trans &trans
                         >;
-
-
                 };
 
-                sym_layer {
-// -----------------------------------------------------------------------------------------
-// |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |
-// |     |     |     |     |     |   |  -  |  =  |  {  |  }  | "|" |
-// |     |     |     |     |     |   |  _  |  +  |  [  |  ]  |  \  |
-//             | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &trans    &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp PIPE
-   &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans          &trans   &kp BSLH
-   &trans  &trans  &trans  &trans  &trans                &trans  &trans  &trans  &trans  &trans
-                        >;
-
-                
-                };
-
-// This layer is unreachable until "tri layer state" is sorted out.
-// Leaving it here for completeness.
+                      
                 num_layer {
-// -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
-//             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &kp A  &kp N7  &kp N8 &kp N9 &kp D
-   &trans &trans &trans &trans &trans    &kp B  &kp N4  &kp N5 &kp N6 &kp E
-   &trans &trans &trans &trans &trans    &kp C  &kp N1  &kp N2 &kp N3 &kp F
-   &trans &trans &trans &trans &trans    &kp N0 &kp DOT &trans &trans &trans 
+    &kp N1 &kp N2 &kp N3 &kp N4 &kp N5           &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 
+    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0           &kp LBKT &kp MINUS &kp EQUAL &kp RBKT &kp SEMI 
+   &trans &trans &trans &trans &trans            &trans &kp BSLH &kp COMMA &kp DOT &trans 
+   &trans &trans &trans &trans &trans            &trans &trans &trans &trans &trans 
                         >;
-
-
                 };
+
+                  fun_layer {
+                        bindings = <
+    &kp F1 &kp F2 &kp F3 &kp F4 &kp F5           &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
+    &kp F11 &kp F12 &none &none &none           &none &none &none &none &none 
+        &none &none &none &none &none           &none &none &none &none &none 
+    &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans 
+                        >;
+                };
+
+
+    media_layer {
+            bindings = <
+              &kp C_MUTE &none &none &none &none     &none &kp C_BRI_DN &kp C_BRI_UP &out OUT_USB &out OUT_BLE 
+    &kp LG(N0) &kp C_VOL_DN &kp C_VOL_UP &kp LG(LS(LBKT)) &kp LG(LS(RBKT))    &kp C_PREV &kp C_VOL_DN &kp C_VOL_UP &kp C_NEXT &none
+          &kp LSHIFT &kp C_BRI_DN &kp C_BRI_UP &kp LG(LEFT) &kp LG(RIGHT)    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR  
+               &trans &trans &trans &trans &trans    &trans &trans &trans &trans &trans 
+            >;
+
+    };
+
         };
 };

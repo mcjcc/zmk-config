@@ -13,11 +13,11 @@
 #
 ---
 include:
-  - board: nice_nano_v2
-    shield: microdox_v2_left
-  - board: nice_nano_v2
-    shield: microdox_v2_right
   # - board: nice_nano_v2
-  #   shield: rhymestone_left
+  #   shield: microdox_v2_left
   # - board: nice_nano_v2
-  #   shield: rhymestone_right
+  #   shield: microdox_v2_right
+  - board: nice_nano_v2
+    shield: rhymestone_left
+  - board: nice_nano_v2
+    shield: rhymestone_right
